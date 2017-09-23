@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<canvas id="can" width="600" height="600" style="border:1px solid red;">
+	
+</canvas>
+<script>
+var can = document.getElementById('can')
+var ctx = can.getContext('2d');
+
+ctx.fillStyle = 'skyblue';
+ctx.fillRect(100,100,100,100);
+
+// strokeStyle 边线的颜色
+// lineJoin 线的样式
+// lineWidth 边线的宽度
+// strokeRect 空心矩形
+
+// 正常的直角
+
+ctx.strokeStyle = 'red';//空心矩形
+ctx.lineWidth = 3;//线宽度
+ctx.lineJoin = 'miter';//正常的直角
+ctx.strokeRect(50,50,50,50)//位置 宽高 
+
+// 圆角矩形
+
+ctx.strokeStyle = 'red';//空心矩形框
+ctx.lineWidth = 5;//线宽度
+ctx.lineJoin = 'round';// 圆角矩形
+ctx.strokeRect(100,200,50,50)
+
+// 方角矩形
+
+ctx.strokeStyle = 'red';//空心矩形框
+ctx.lineWidth = 8;//线宽度
+ctx.lineJoin = 'bevel';// 方角矩形
+ctx.strokeRect(100,200,50,50)
+
+</script>
+</body> 
+</html>		 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<canvas id="can" width="600" height="600" style="border:1px solid red;">
+	
+</canvas>
+<script>
+var can = document.getElementById('can')
+var ctx = can.getContext('2d');
+
+/*
+	textAlign 水平对齐方式
+		取值 start|end|left|right|center
+	textBaseAlign 垂直对齐方式
+		取值 top|hanging|middle|alphabetic|bottom
+*/
+
+ctx.textAlign = 'start';
+ctx.textAlign = 'center';
+ctx.textBaseAlign = 'top'
+ctx.fillStyle = 'blue';// 填充颜色
+ctx.font = "34px 微软雅黑";// 字体样式
+ctx.fillText('大家好',100,150);// 实心文字
+
+ctx.font = "bold 34px 微软雅黑";
+ctx.strokeText ('大家好',100,200);//空心文字
+
+</script>
+</body>
+</html>
