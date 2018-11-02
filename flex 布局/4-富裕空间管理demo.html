@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0;
+		}
+		.box{
+			width: 800px;
+			height: 300px;
+			border: 1px solid #000;
+
+			display: flex;
+
+			/*元素在主轴开始位置 富裕空间在主轴结束位置*/
+			/*justify-content: flex-start;*/
+
+			/*元素在主轴结束位置 富裕空间在主轴开始位置*/
+			/*justify-content: flex-end;*/
+
+			/*元素在主轴中间位置 富裕空间在主轴两侧*/
+			/*justify-content: center;*/
+
+			/*富裕空间平均分配在每两个元素之间*/
+			/*justify-content: space-between;*/
+
+			/*富裕空间平均分配在每个元素的两侧*/
+			/*justify-content: space-around;*/
+
+
+			/*元素在侧轴开始位置 富裕空间在侧轴结束位置*/
+			/*align-items: flex-start;*/
+
+			/*元素在侧轴结束位置 富裕空间在侧轴开始位置*/
+			/*align-items: flex-end;*/
+
+			/*元素在侧轴中间位置 富裕空间在侧轴两侧*/
+			align-items: center;
+
+			/*根据侧轴文字的基线对齐*/
+			/*align-items: baseline;*/
+
+		}
+		.box div{
+			width: 50px;
+			height: 50px;
+			background: red;
+			font-size: 26px;
+			text-align: center;
+			line-height: 50px;
+			color: #fff;
+		}
+		.box div:nth-child(2){
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+</body>
+</html>
