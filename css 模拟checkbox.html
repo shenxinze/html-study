@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<style>
+		.checkbox {
+			position: relative;
+		}
+		.checkbox input {
+			position: absolute;
+			display: none;
+		}
+		.checkbox input+label {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			border: 1px solid #ddd;
+			background-color: white;
+			overflow: hidden;
+		}
+		.checkbox input:checked+label{
+			background-color: #5fb878;
+		}
+		.checkbox input:checked+label:after {
+			content: "";
+			position: absolute;
+			left: 2px;
+			bottom: 12px;
+			width: 9px;
+		    height: 4px; 
+		    border: 2px solid white;
+		    border-top-color: transparent;
+		    border-right-color: transparent;
+		    -ms-transform: rotate(-60deg);
+		    -moz-transform: rotate(-60deg);
+		    -webkit-transform: rotate(-60deg);
+		    transform: rotate(-45deg);
+		}
+	</style>
+</head>
+<body>
+	<span class="checkbox">
+	    <input type="checkbox"  id="check">
+	    <label for="check"></label>
+	</span>
+</body>
+</html>
